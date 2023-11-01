@@ -2,6 +2,8 @@
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,9 +22,11 @@ public class User
 	   @GeneratedValue(strategy=GenerationType.IDENTITY)
 	   private int userId;
 	   
+	   @NotNull
 	   @Column(length=30)
 	   private String userName;
 	   
+	   @NotNull
 	   @Column(length=30)
 	   private String password;
 	   

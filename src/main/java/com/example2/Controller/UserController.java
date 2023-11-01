@@ -54,6 +54,12 @@ public class UserController
 		return  userService.getAllusers();
 	}
 	
+	@PostMapping("/addusers")
+	public User addUser(User user)
+	{
+		return userService.addUser(user);
+	}
+	
 	@PostMapping("/assigndepartment/{did}/{eid}")
 	public String assignDepartmentToEmployee(@PathVariable int did,@PathVariable int eid)
 	{

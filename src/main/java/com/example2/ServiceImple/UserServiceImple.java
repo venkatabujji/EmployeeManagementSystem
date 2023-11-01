@@ -40,10 +40,13 @@ public class  UserServiceImple implements UserService
 		return users;
 	}
 	
-	//@Transactional
-	//public String sigUp(@RequestBody String username,@RequestBody String password ) {
-		
-	//}/
+	@Override
+	public  User addUser(User user)
+	{
+		userRepository.save(user);
+		return user;
+	}
+	
 }
 
 
