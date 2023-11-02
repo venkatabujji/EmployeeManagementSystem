@@ -1,9 +1,7 @@
 package com.example2.DTO;
 
 import java.util.List;
-
 import com.example2.Entity.Employee;
-
 import lombok.Data;
 
 
