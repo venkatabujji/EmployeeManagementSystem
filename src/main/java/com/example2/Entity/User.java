@@ -1,9 +1,7 @@
-  package com.example2.Entity;
-
+package com.example2.Entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-
 @Table(name="Registration")
 @Inheritance(strategy=InheritanceType.JOINED)
 public class User
