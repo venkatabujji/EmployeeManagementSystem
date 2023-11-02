@@ -21,17 +21,13 @@ public class EmployeeServiceImple implements EmployeeService
 {
 
 	@Autowired
-    private EmployeeRepository employeeRepository;
+        private EmployeeRepository employeeRepository;
 	
 	@Autowired
 	private DepartmentRepository departmentRepository;
 	
 	@Autowired
 	private Converter converter;
-	
-	
-	
-
 	
 	@Override
 	public List<Employee> getEmployees()
@@ -41,15 +37,12 @@ public class EmployeeServiceImple implements EmployeeService
 		return employees;
 	}
 	
-	
-	
 	public Employee addEmployee(Employee employee)
 	{
 		employeeRepository.save(employee);
 		return employee;
 	}
 	
-
 	@Override
 	public Employee updateEmployee(int emp_id, Employee employee)
 	{
@@ -100,8 +93,8 @@ public class EmployeeServiceImple implements EmployeeService
 		}
 	}
 
-
-	public String assignDepartmentToEmployee(int did, int eid) {
+        public String assignDepartmentToEmployee(int did, int eid) 
+	{
 		Employee e=employeeRepository.findById(eid).orElseThrow(()->
 		new ResourceNotFoundException("Employee", "Id", eid));
 		
@@ -119,19 +112,17 @@ public class EmployeeServiceImple implements EmployeeService
 		return "Employees assigned to Department successfully";
 	}
 
-
-
 	@Override
-	public Employee getEmployeeById(int id) {
-		// TODO Auto-generated method stub
+	public Employee getEmployeeById(int id) 
+	{
 		try
 		{
-			Employee employee=employeeRepository.findById(id).get();
+		Employee employee=employeeRepository.findById(id).get();
 		return employee;
 		}
 		catch(Exception e)
 		{
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+		throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 		}
 	}
 
