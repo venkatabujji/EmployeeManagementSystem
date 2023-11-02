@@ -17,10 +17,10 @@ public class Converter
 		{
 			BeanUtils.copyProperties(employee1, employee1);
 		}
-	     return employee1;
+	  return employee1;
 	}
 
-	//convert from Entity to DTO
+	
 	public Employee convertToEmployee(Employee employee)
 	{
 		Employee employee1=new Employee();
@@ -30,10 +30,6 @@ public class Converter
 		}
 		return employee1;
 	}
-
-
-
-	//convert from DTO to Entity
 
 	public   Department convertToDepartmentEntity(Department department)
 	{
@@ -45,7 +41,7 @@ public class Converter
 	     return department1;
 	}
 
-	//convert from Entity to DTO
+	
 	public Department convertToDepartment(Department department)
 	{
 		Department department1=new Department();
@@ -56,20 +52,18 @@ public class Converter
 		return department1;
 	}
 	
-	
-	//convert from DTO to Entity
 
-		public   User convertToUserEntity(User user)
+	public   User convertToUserEntity(User user)
+	{
+		User user1=new User();
+		if(user1!=null)
 		{
-			User user1=new User();
-			if(user1!=null)
-			{
-				BeanUtils.copyProperties(user1, user1);
-			}
-		     return user1;
+			BeanUtils.copyProperties(user1, user1);
 		}
+		return user1;
+	}
 
-		//convert from Entity to DTO
+	
 		public User convertToUser(User user)
 		{
 			User user1=new User();
@@ -78,7 +72,7 @@ public class Converter
 				BeanUtils.copyProperties(user1, user1);
 			}
 			return user1;
-}
+                  }
 }
 
 
