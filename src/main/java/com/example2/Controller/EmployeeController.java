@@ -1,9 +1,7 @@
 package com.example2.Controller;
 
-
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,13 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-
 import com.example2.Entity.Employee;
 import com.example2.Service.EmployeeService;
-
-
-
 
 
 @RestController
@@ -56,7 +49,6 @@ public class EmployeeController
 	}
 	
 	@DeleteMapping("/deleteEmployee/{emp_id}")
-
 	public String deleteEmployee(@PathVariable("emp_id") int id)
 	{
 		return employeeservice.deleteEmployee(id);
