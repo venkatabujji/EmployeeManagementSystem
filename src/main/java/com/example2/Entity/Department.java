@@ -1,11 +1,9 @@
 package com.example2.Entity;
+
 import java.util.List;
 import java.util.Set;
-
 import javax.persistence.*;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,16 +24,10 @@ public class Department
 	  private String dept_name;
 
 	
-	
-	//one department have many employees
+	/*one department have many employees
 	  @OneToMany(cascade=CascadeType.PERSIST, fetch=FetchType.LAZY)
 	  @JsonIgnoreProperties("department")
-	  List<Employee> employees;
-
-
-	
-	
-	
+	  List<Employee> employees; */
 	}
 		
 		
