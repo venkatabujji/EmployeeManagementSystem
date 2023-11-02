@@ -21,10 +21,10 @@ import javax.servlet.ServletException;
 @RequestMapping("/user")
 public class UserController   
 {
-	@Autowired
+    @Autowired
     private UserService userService;
 	
-	@Autowired
+    @Autowired
     private EmployeeServiceImple eservice;
 	
 	
@@ -50,19 +50,20 @@ public class UserController
 	}
 	
 	@GetMapping("/users")
-	public List<User> getAllusers(){
-		return  userService.getAllusers();
+	public List<User> getAllusers()
+	{
+	return  userService.getAllusers();
 	}
 	
-	@PostMapping("/addusers")
+	@PostMapping("/adduser")
 	public User addUser(@RequestBody User user)
 	{
-		return userService.addUser(user);
+	return userService.addUser(user);
 	}
 	
 	@PostMapping("/assigndepartment/{did}/{eid}")
 	public String assignDepartmentToEmployee(@PathVariable int did,@PathVariable int eid)
 	{
-		return eservice.assignDepartmentToEmployee(did,eid);
+	return eservice.assignDepartmentToEmployee(did,eid);
 	}
 }
