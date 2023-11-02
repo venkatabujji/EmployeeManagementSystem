@@ -1,15 +1,7 @@
 package com.example2.Entity;
 
-
-
-
-
 import javax.persistence.*;
-
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,8 +14,6 @@ import lombok.NoArgsConstructor;
 @Table(name="employee")
 public class Employee  
 {
-	
-	
 	 @Id
 	   @GeneratedValue(strategy=GenerationType.IDENTITY)
 		@Column(length= 10)
@@ -48,10 +38,6 @@ public class Employee
 		@ManyToOne
 		@JoinColumn(name="dept_id")
 		private Department department;
-				
-				
-		
-		
 		
 	}
 
