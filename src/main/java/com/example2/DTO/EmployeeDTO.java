@@ -2,7 +2,6 @@ package com.example2.DTO;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
 import com.example2.Entity.Department;
 
 
